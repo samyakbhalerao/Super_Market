@@ -19,11 +19,11 @@
 
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/angular/angular.js"></script>
-
-  <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="components/slider/slider.js"></script>
+<!--  <script src="components/slider/slider.js"></script>-->
   <script src="app.js"></script>
 
   <script src="view1/view1.js"></script>
@@ -31,12 +31,54 @@
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  <!--slider mock-->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perspective Mockup Slideshow | Demo 3</title>
+  <meta name="description" content="A perspective slideshow based on Franklin Ta's CSS matrix3d transforms" />
+  <meta name="keywords" content="perspective, mockup, slideshow, transform, 3d, matrix, css" />
+  <meta name="author" content="Codrops" />
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="components/mockup_slideshow/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="components/mockup_slideshow/demo.css" />
+  <link rel="stylesheet" type="text/css" href="components/mockup_slideshow/animate.css" />
+  <link rel="stylesheet" type="text/css" href="components/mockup_slideshow/mockup3.css" />
+  <script src="components/mockup_slideshow/modernizr.custom.js"></script>
+  <script src="components/mockup_slideshow/classie.js"></script>
+  <script src="components/mockup_slideshow/main.js"></script>
+  <!--slider mock end-->
+  <!--checkout-->
+  <link rel="stylesheet" type="text/css" href="components/checkout/checkout-rounded.css" />
+  <!--chekcout end-->
 </head>
-<body   background="assets/images/wood-texture.jpg" repeat;>
-<div class="container">
-  <div class="container-fluid">
+<body>
+<div class="">
+  <div class="container">
+    <!--Slider 2-->
 
-  <header class="navbar navbar-inverse">
+      <div id="wrap" class="wrap mock_slider">
+        <div class="mockup">
+          <img class="mockup__img" src="components/mockup_slideshow/img/mockup3.jpg" />
+          <div id="mobile" class="mobile">
+            <ul id="slideshow" class="slideshow">
+
+              <li class="slideshow__item"><img style="opacity: 0.25" src="components/mockup_slideshow/img/new/dart_game.jpg"/></li>
+              <li class="slideshow__item"><img style="opacity: 0.25" src="components/mockup_slideshow/img/new/messi_football_player.jpg"/></li>
+              <li class="slideshow__item"><img style="opacity: 0.25" src="components/mockup_slideshow/img/new/nutri.jpg"/></li>
+              <li class="slideshow__item"><img style="opacity: 0.25" src="components/mockup_slideshow/img/new/VB-shoes.jpg"/></li>
+            </ul>
+          </div>
+          <header class="codrops-header">
+            <h1><span>Sports</span> Market <i>A Place for every sports person and sports lover </i></h1>
+          </header>
+        </div>
+      </div>
+
+
+    <!--slider2 end-->
+ <!-- <header class="navbar navbar-inverse">
 
     <div class="navbar-brand">
 
@@ -45,26 +87,12 @@
       <div class="navbar-text "><p class="">Signed in as</p></div>
       </div>
 
-  </header>
-<!--slider-->
-    <div ng-controller="CarouselDemoCtrl">
-      <div style="height: 305px">
-        <carousel interval="myInterval">
-          <slide ng-repeat="slide in slides" active="slide.active">
-            <img ng-src="{{slide.image}}" style="margin:auto;">
-            <div class="carousel-caption">
+  </header>-->
 
-              <p  style="color:lightsteelblue">{{slide.text}}</p>
-            </div>
-          </slide>
-        </carousel>
-      </div>
 
-    </div>
-    <!--slider end-->
     <div class="col-md-12">
   <ul class="menu">
-<!--    <li><a href="#/view1">view1</a></li>-->
+  <li><a href="#/view1">view1</a></li>
     <li><a href="#/view2">view2</a></li>
   </ul>
    </div>
@@ -79,7 +107,95 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+    <!--checkout bar-->
+    <div class="dummy-fixed">
+      <svg class="checkout__icon" width="30px" height="30px" viewBox="0 0 35 35">
+        <path d="M33.623,8.004c-0.185-0.268-0.486-0.434-0.812-0.447L12.573,6.685c-0.581-0.025-1.066,0.423-1.091,1.001 c-0.025,0.578,0.423,1.065,1.001,1.091L31.35,9.589l-3.709,11.575H11.131L8.149,4.924c-0.065-0.355-0.31-0.652-0.646-0.785 L2.618,2.22C2.079,2.01,1.472,2.274,1.26,2.812s0.053,1.146 0.591,1.357l4.343,1.706L9.23,22.4c0.092,0.497,0.524,0.857,1.03,0.857 h0.504l-1.15,3.193c-0.096,0.268-0.057,0.565,0.108,0.798c0.163,0.232,0.429,0.37,0.713,0.37h0.807 c-0.5,0.556-0.807,1.288-0.807,2.093c0,1.732,1.409,3.141,3.14,3.141c1.732,0,3.141-1.408,3.141-3.141c0-0.805-0.307-1.537-0.807-2.093h6.847c-0.5,0.556-0.806,1.288-0.806,2.093c0,1.732,1.407,3.141,3.14,3.141 c1.731,0,3.14-1.408,3.14-3.141c0-0.805-0.307-1.537-0.806-2.093h0.98c0.482,0,0.872-0.391,0.872-0.872s-0.39-0.873-0.872-0.873 H11.675l0.942-2.617h15.786c0.455,0,0.857-0.294,0.996-0.727l4.362-13.608C33.862,8.612,33.811,8.272,33.623,8.004z M13.574,31.108c-0.769,0-1.395-0.626-1.395-1.396s0.626-1.396,1.395-1.396c0.77,0,1.396,0.626,1.396,1.396S14.344,31.108,13.574,31.108z M25.089,31.108c-0.771,0-1.396 0.626-1.396-1.396s0.626-1.396,1.396-1.396c0.77,0,1.396,0.626,1.396,1.396 S25.858,31.108,25.089,31.108z"/>
+      </svg>
+      <div class="checkout">
+        <a class="checkout__button" href="#"><!-- Fallback location -->
+						<span class="checkout__text">
+							<span class="checkout__text-inner checkout__initial-text">Checkout</span>
+							<span class="checkout__text-inner checkout__final-text">$40.70 <i class="fa fa-fw fa-shopping-cart"></i></span>
+						</span>
+        </a>
+        <div class="checkout__order">
+          <div class="checkout__order-inner">
+            <table class="checkout__summary">
+              <thead>
+              <tr><th>Item</th><th>QTY</th><th>Price</th><th>&nbsp;</th></tr>
+              </thead>
+              <tbody>
+              <tr><td>Imitations <span>Mark Lanegan</span></td><td>1</td><td>$12.90</td><td><button class="checkout__action"><i class="icon fa fa-trash"></i></button></td></tr>
+              <tr><td>Out Of Exile <span>Audioslave</span></td><td>1</td><td>$15.90</td><td><button class="checkout__action"><i class="icon fa fa-trash"></i></button></td></tr>
+              <tr><td>Cure For Pain <span>Morphine</span></td><td>1</td><td>$11.90</td><td><button class="checkout__action"><i class="icon fa fa-trash"></i></button></td></tr>
+              </tbody>
+            </table><!-- /checkout__summary -->
+            <button class="checkout__close checkout__cancel"><i class="icon fa fa-fw fa-close"></i>Close</button>
+          </div><!-- /checkout__order-inner -->
+        </div><!-- /checkout__order -->
+      </div><!-- /checkout -->
+      <div class="checkout__count">3</div>
+    </div>
+    <!--checkout donre-->
   </div>
+  <script>
+    (function() {
+      var dummy = document.getElementById('dummy-grid');
+      [].slice.call( document.querySelectorAll( '.checkout' ) ).forEach( function( el ) {
+        var openCtrl = el.querySelector( '.checkout__button' ),
+                closeCtrl = el.querySelector( '.checkout__cancel' );
+
+        openCtrl.addEventListener( 'click', function(ev) {
+          ev.preventDefault();
+          classie.add( el, 'checkout--active' );
+          classie.add( dummy, 'dummy-grid--highlight' );
+        } );
+
+        closeCtrl.addEventListener( 'click', function() {
+          classie.remove( el, 'checkout--active' );
+          classie.remove( dummy, 'dummy-grid--highlight' );
+        } );
+      } );
+    })();
+  </script>
+  <script>
+    (function() {
+      new Slideshow( document.getElementById( 'slideshow' ) );
+
+      /* Mockup responsiveness */
+      var body = docElem = window.document.documentElement,
+              wrap = document.getElementById( 'wrap' ),
+              mockup = wrap.querySelector( '.mockup' ),
+              mockupWidth = mockup.offsetWidth;
+
+      scaleMockup();
+
+      function scaleMockup() {
+        var wrapWidth = wrap.offsetWidth,
+                val = wrapWidth / mockupWidth;
+
+        mockup.style.transform = 'scale3d(' + val + ', ' + val + ', 1)';
+      }
+
+      window.addEventListener( 'resize', resizeHandler );
+
+      function resizeHandler() {
+        function delayed() {
+          resize();
+          resizeTimeout = null;
+        }
+        if ( typeof resizeTimeout != 'undefined' ) {
+          clearTimeout( resizeTimeout );
+        }
+        resizeTimeout = setTimeout( delayed, 50 );
+      }
+
+      function resize() {
+        scaleMockup();
+      }
+    })();
+  </script>
 </div>
 </body>
 </html>

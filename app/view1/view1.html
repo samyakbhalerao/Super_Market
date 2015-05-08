@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-3">
-        <div class="panel panel-primary">
+        <div class="panel panel-primary product_category_div">
             <div class="panel-heading">
             <span>Category</span></div>
             <div class="panel-body">
@@ -15,14 +15,17 @@
 
     </div>
     <div class="col-md-9">
-        <div class="panel panel-default">
+        <div class="panel panel-default product_list_div">
             <div class="panel-title">data/products</div>
             <div class="panel-body">
                 <ul class='product_list'>
-                    <li><div>Nike</div></li>
-                    <li><div>T-shirt</div></li>
+                    <li ng-repeat="item in products_object"><div>{{item.name}}:{{item.price|currency}}</br>
+                    {{item.category}}</br>
+                        {{item.description}}
+                    </div></li>
+                    <!--<li><div>T-shirt</div></li>
                     <li><div>Amway</div></li>
-                    <li><div>Volleyball</div></li>
+                    <li><div>Volleyball</div></li>-->
                 </ul>
 
             </div>

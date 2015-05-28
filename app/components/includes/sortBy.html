@@ -1,0 +1,32 @@
+<div ng-controller="sortFilter.CTRL">
+<div class="sort-wrap clearfix" >
+
+    <label for="">SORT BY</label>
+    <div class="dropdown-wrap sort-dropdown clearfix">
+        <dropdown model="model.sortByDropdown" class="sort-trigger pull-left"></dropdown>
+        <div class="sort-caret caret-up">
+            <div class="caret-up active"><i class="fa fa-caret-up"></i></div>
+            <div class="caret-down"><i class="fa fa-caret-down"></i></div>
+        </div>
+    </div>
+</div>
+<div class="sort-wrap">
+    <div class="select-wrap">
+        <select name="" id="" class="filter-dropdown">
+
+            <option ng-repeat="item in model.sortByDropdown.options" ><strong>{{item.text}}</strong></option>
+       <!--     <option value="">Discount</option>
+            <option value="">Delivery time</option>
+            <option value="">Distance</option>
+            <option value="">Minimum order</option>
+            <option value="">Average pricing</option>
+            <option value="">Rating</option>
+            <option value="">Restaurant name</option>
+       --> </select>
+    </div>
+    <div class="sort-caret caret-up">
+        <div class="caret-up active"><i class="fa fa-caret-up"></i></div>
+        <div class="caret-down"><i class="fa fa-caret-down"></i></div>
+    </div>
+</div>
+</div>

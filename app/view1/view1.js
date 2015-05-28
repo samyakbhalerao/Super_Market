@@ -33,7 +33,7 @@ angular.module('myApp.view1', ['ngRoute'])
         console.log(data);
       }).error(function(data,status,header){
        // $scope.products_object='No data found';
-        console.log(data);
-      window.alert('error:',data);
+        console.log(data+''+status);
+    //  window.alert('error:',data);
       });
 }]);

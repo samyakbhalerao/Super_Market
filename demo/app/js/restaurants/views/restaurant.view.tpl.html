@@ -1,0 +1,36 @@
+<div class="container" style="border: 1px solid black">
+    <header style="border: 1px solid black">
+        Restaurant header
+    </header>
+    <div class="slide_show" style="border: 1px solid black">
+        restaurant slide show
+    </div>
+    <div style="border: 1px solid black">
+        Tab section (Cusines|Restaurants|Meals)
+        <div class="page-tabs">
+            <div class="max-content">
+                <div class="tabs-container clearfix">
+                    <a>samyak</a>
+                    <div class="tab-item"><a href="#/restaurants/cusines" ui-sref="restaurants.cusines">Cuisine</a></div>
+                    <div class="tab-item"><a href="#/restaurants/restaurant_list" ui-sref="restaurants.restaurants_list">Restaurants</a></div>
+                    <div class="tab-item active"><a href="#/restaurants/meals" ui-sref="restaurants.meals">Meals</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="border: 1px solid black">
+        Sorting filters
+        <div class="container" >
+            <available-For></available-For>
+
+        </div>
+        <div class="container" sortBy>  <sort-By></sort-By></div>
+        <div class="container" searchBox><search-Box></search-Box></div>
+    </div>
+    <div class="tab-content" style="border: 1px solid black">
+        <spna>Tab content</spna>
+       <div style="border: 1px solid blue" ui-view></div>
+    </div>
+
+
+</div>
